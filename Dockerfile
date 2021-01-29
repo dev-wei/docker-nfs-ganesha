@@ -1,4 +1,4 @@
-FROM fedora:29
+FROM fedora:34
 MAINTAINER marc@slintes.net
 
 # Install dependencies
@@ -9,7 +9,7 @@ RUN yum -y install \
     yum -y clean all
 
 # Add Tini
-ENV TINI_VERSION v0.16.1
+ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc /tini.asc
 RUN set -x \
